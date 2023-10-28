@@ -47,10 +47,4 @@ public class Validator {
             throw new WrongPasswordException("password не совпадает с confirmPassword");
         }
     }
-    /*
-    boolean matches;
-        Pattern.matches("[a-zA-Z0-9_]{1,20}", login);
-        if (matches )
-
-     */
 }
