@@ -13,7 +13,6 @@ public class Validator {
     ) {
         validateLogin(login);
         validatePassword(password, confirmPassword);
-        System.out.println("Валидация прошла успешно");
     }
 
     public static void validateLogin(String login) {
