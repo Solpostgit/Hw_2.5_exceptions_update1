@@ -1,4 +1,5 @@
 import exception.WrongLoginException;
+import exception.WrongPasswordException;
 
 public class Main {
     public static void main(String[] args) {
@@ -6,8 +7,20 @@ public class Main {
         String password = "zxCv_9876";
         String confirmPassword = "zxCv_9876";
 
-        Validator.validateString(login, password, confirmPassword);
+        try {
+            Validator.validateString(login, password, confirmPassword);
+            System.out.println("Валидация прошла успешно");
+        }
+        /*
+        catch (WrongLoginException wrongLoginException) {
+            System.out.println(wrongLoginException);
+        }
 
+         */
+        //обрабатываемое исключение
+        catch (WrongPasswordException wrongPasswordException) {
+            System.out.println(wrongPasswordException);
+        }
     }
 
 
