@@ -18,7 +18,7 @@ public class Main {
             System.out.println(wrongLoginException);
         }
          */
-        //исключение
+
         catch (WrongPasswordException wrongPasswordException) {
             wrongPasswordException.printStackTrace();
             //System.out.println(wrongPasswordException);
