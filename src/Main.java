@@ -11,17 +11,20 @@ public class Main {
             Validator.validateString(login, password, confirmPassword);
             System.out.println("Валидация прошла успешно");
         }
-        /*
+        /* убрал блок в комментарий, чтобы было видно, что при вызове исключения в login,
+        // выполнение программы прерывается
+
         catch (WrongLoginException wrongLoginException) {
             System.out.println(wrongLoginException);
         }
-
          */
-        //обрабатываемое исключение
+        //исключение
         catch (WrongPasswordException wrongPasswordException) {
-            System.out.println(wrongPasswordException);
+            wrongPasswordException.printStackTrace();
+            //System.out.println(wrongPasswordException);
         }
+
+        System.out.println("Валидация завершилась");
+
     }
-
-
 }
